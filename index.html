@@ -1,0 +1,67 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>PickinTunes</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <nav id="navbar">
+    <a href="#">View Tunes</a> 
+    <a href="#">Add Tune</a> 
+    <a href="#">Profile</a>
+  </nav>
+
+  <div id="display-body">
+    <section id="choose-panel">
+      <h2> Choose Panel </h2>
+      <div id="artist">
+        <label for="select-artist">Select Artist</label>
+        <select id="select artist">
+           <option value="earl-scruggs">Earl Scruggs</option>
+          <option value="lester-flatt">Lester Flatt</option>
+        </select>
+      </div>
+      <br>
+      <label for="select-song-title">Select Album</label>
+      <div id="album-title">
+        <select>
+          <option value="little-maggie">Little Maggie</option>
+          <option value="old-joe-clark">Old Joe Clark</option>
+        </select>
+      </div>
+      <br>
+      <button type="button">Filter</button>
+    </section>
+
+    <section id="song-list">
+      <h2> Tunes </h2>
+
+        <section>
+          <hr>
+        
+          <h3 id="song1-title">Song 1 Title</h3> 
+          <div class="details">
+            by <span id="song1-artist" class="xtra">Artist1-Name </span> on the album <span id="song1-album"  class="xtra">Album1</span>
+          </div> 
+          <hr>
+
+          <h3 id=song2-title>Song 2 Title</h3>
+          <p> by <span id="song2-artist" class="xtra">Artist2-Name </span>   on the album <span id="song2-album" class="xtra">Album2</span></p> 
+         <hr>
+          
+          <h3 id=song3-title>Song 3 Title</h3>
+          <p> by <span  class="xtra" id="song3-artist">Artist3-Name </span>   on the album <span id="song3-album" class="xtra">Album3</span></p> 
+        
+        </section>
+
+    </section>
+
+  </div>
+
+</body>
+  <script src="tuneloader.js" type="text/javascript" charset="utf-8" async defer></script>
+  <script src="tunes.js" type="text/javascript" charset="utf-8" async defer></script>  
+</html>
