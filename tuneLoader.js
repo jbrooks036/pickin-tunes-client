@@ -3,39 +3,47 @@
 
 var Pickin = (function (xhr) {
 
-  // an array to hold tunes 
-  var tuneArray = [];
+  console.log("tuneLoader.js: 6 -  ");
 
-  // create a request to retrieve JSON 
-  var loader = new XMLHttpRequest();
+  // all the code contained in this 
+  // "function (cb) {..." needs to be inside 
+  // the "{ ... }" because otherwise 
+  // e.g. the "cb(tuneArray)" call would get executed
+  // before the JSON fetch happened. 
+  xhr.getTunes = function (cb) {
 
-  // set up loader with callback function
-  loader.addEventListener("load", fetchTunes);
+    // an array to hold tunes 
+    var tuneArray = [];
 
-  // now do the actual load from JSON file
-  loader.open("GET", "tunes.json");
-  loader.send();
+    // create a request to retrieve JSON 
+    var loader = new XMLHttpRequest();
 
-  // function to extract tunes from JSON object 
-  // and put it into a local (private) array ??
-  function fetchTunes() {
+    // set up loader with callback function
+    loader.addEventListener("load", fetchTunes);
 
-    // get the json 
-    var jsonObj = JSON.parse(this.responseText);
+    // now do the actual load from JSON file
+    loader.open("GET", "tunes.json");
+    loader.send();
 
-    console.log("jsonObj = ", jsonObj);
+    // function to extract tunes from JSON object 
+    // and put it into a local (private) array ??
+    function fetchTunes() {
 
-    var numTunes = jsonObj.tunes.length;
+      // get the json 
+      var jsonObj = JSON.parse(this.responseText);
 
-    for (i = 0; i < numTunes; i++) {
-      tuneArray.push(jsonObj.tunes[i]);
-      console.log("tuneArray = ", tuneArray);
+      console.log("tuneLoader.js: 30 - jsonObj = ", jsonObj);
+
+      var numTunes = jsonObj.tunes.length;
+
+      for (i = 0; i < numTunes; i++) {
+        tuneArray.push(jsonObj.tunes[i]);
+        console.log("tuneLoader.js: 36 - tuneArray = ", tuneArray);
+      }
+
+      cb(tuneArray)
     }
 
-  }
-
-  xhr.getTunes = function () {
-    return tuneArray;
   }
 
   // all done
