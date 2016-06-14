@@ -21,7 +21,7 @@
   border:2px solid black;
 }
 
-#song-list {
+#list-tunes-view {
 	background: #FEFAC0;
 	color: #785616;
 	font-size: 100%;
@@ -38,6 +38,13 @@
   /*overflow:hidden;*/
 }
 
+.visible {
+  display: block;
+}
+
+.hidden {
+  display: none;
+}
 .xtra {
   font-weight: bold;
 }

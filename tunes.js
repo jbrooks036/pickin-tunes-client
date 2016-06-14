@@ -9,6 +9,10 @@ var Pickin = (function () {
 	Pickin.getTunes(function (tunes) {
 		console.log("tunes.js:12 - tunes = ", tunes); // confirm they're in the array
 
+		var listLink = document.getElementById("link-list-tunes");
+		var listView = document.getElementById("list-tunes-view");
+
+
 		// {Song name} by {Artist} on the album {Album}
 		var song1Title = document.getElementById("song1-title");
 		song1Title.innerHTML = tunes[0].title;
