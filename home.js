@@ -1,25 +1,21 @@
 var Pickin = (function () {
 
-  console.log("tunes.js: 3 - Pickin = ", Pickin);
+  console.log("home.js: 3 - Pickin = ", Pickin);
   
-  var listLink = document.getElementById("link-list-tunes");
-  console.log("listLink = ", listLink);
-  var listView = document.getElementById("list-tunes-view");
-  console.log("listLink = ", listView);
-
 	// need to call Pickin.getTunes w/ a callback 
   // because JSON loads asynchronously
 	Pickin.getTunes(function (tunes) {
-//		console.log("tunes.js:13 - tunes = ", tunes); // confirm they're in the array
+		console.log("home.js:8 - tunes = ", tunes); // confirm they're in the array
 
-		listLink.addEventListener("click", function() {
+		var homeLink = document.getElementById("link-home");
+		var homeView = document.getElementById("home-view");
 
-//      console.log("tunes.js:17 - tunes = ", tunes); // confirm they're in the array
-      homeView.classList.add("hidden");
-      addView.classList.add("hidden");
+		homeLink.addEventListener("click", function() {
+        listView.classList.add("hidden");
+        addView.classList.add("hidden");
 
-      listView.classList.add("visible");
-      listView.classList.remove("hidden");
+        homeView.classList.add("visible");
+        homeView.classList.remove("hidden");
 
 /*
   		// {Song name} by {Artist} on the album {Album}
@@ -45,14 +41,12 @@ var Pickin = (function () {
   		song3Album.innerHTML = tunes[2].album;
 */
 		});
-	})
+
+  })
 	// could also be done using Promise instead:
 	// Pickin.getTunes().then(function (t) {
 	// 	tunes = t;
 	// [...]
 	// });
-
-
-
 
 })(Pickin || {});

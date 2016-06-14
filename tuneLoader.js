@@ -3,7 +3,7 @@
 
 var Pickin = (function (xhr) {
 
-  console.log("tuneLoader.js: 6 -  ");
+  // console.log("tuneLoader.js: 6 -  ");
 
   // all the code contained in this 
   // "function (cb) {..." needs to be inside 
@@ -32,13 +32,13 @@ var Pickin = (function (xhr) {
       // get the json 
       var jsonObj = JSON.parse(this.responseText);
 
-      console.log("tuneLoader.js: 30 - jsonObj = ", jsonObj);
+//      console.log("tuneLoader.js: 30 - jsonObj = ", jsonObj);
 
       var numTunes = jsonObj.tunes.length;
 
       for (i = 0; i < numTunes; i++) {
         tuneArray.push(jsonObj.tunes[i]);
-        console.log("tuneLoader.js: 36 - tuneArray = ", tuneArray);
+//        console.log("tuneLoader.js: 36 - tuneArray = ", tuneArray);
       }
 
       cb(tuneArray)

@@ -9,9 +9,9 @@
 
 <body>
   <nav id="navbar">
-    <a href="index.html">Home</a> 
-    <a href="tunesList.html" id="link-list-tunes">View Tunes</a> 
-    <a href="addTune.html" id="link-add-tune">Add Tune</a> 
+    <a href="#" id="link-home">Home</a> 
+    <a href="#" id="link-list-tunes">View Tunes</a> 
+    <a href="#" id="link-add-tune">Add Tune</a> 
     <a href="profile.html">Profile</a>
   </nav>
 
@@ -37,32 +37,40 @@
       <button type="button">Filter</button>
     </section>
 
-    <section id="list-tunes-view">
+    <section id="list-tunes-view" class="hidden">
       <h2> Tunes </h2>
+      <hr>
+    
+      <h3 id="song1-title">Song 1 Title</h3> 
+      <div class="details">
+        by <span id="song1-artist" class="xtra">Artist1-Name </span> on the album <span id="song1-album"  class="xtra">Album1</span>
+      </div> 
+      <hr>
 
-        <section>
-          <hr>
-        
-          <h3 id="song1-title">Song 1 Title</h3> 
-          <div class="details">
-            by <span id="song1-artist" class="xtra">Artist1-Name </span> on the album <span id="song1-album"  class="xtra">Album1</span>
-          </div> 
-          <hr>
+      <h3 id=song2-title>Song 2 Title</h3>
+      <p> by <span id="song2-artist" class="xtra">Artist2-Name </span> on the album <span id="song2-album" class="xtra">Album2</span></p> 
+     <hr>
+      
+      <h3 id=song3-title>Song 3 Title</h3>
+      <p> by <span  class="xtra" id="song3-artist">Artist3-Name </span> on the album <span id="song3-album" class="xtra">Album3</span></p> 
+    </section>
 
-          <h3 id=song2-title>Song 2 Title</h3>
-          <p> by <span id="song2-artist" class="xtra">Artist2-Name </span>   on the album <span id="song2-album" class="xtra">Album2</span></p> 
-         <hr>
-          
-          <h3 id=song3-title>Song 3 Title</h3>
-          <p> by <span  class="xtra" id="song3-artist">Artist3-Name </span>   on the album <span id="song3-album" class="xtra">Album3</span></p> 
-        
-        </section>
+    <section id="add-tune-view" class="hidden"> 
+    <h2> Add a Tune</h2>
+      <form action="action_page.php">
+        Tune Title:<br>
+        <input type="text" name="tune-title" value="add tune title here">
+        <br><br>
+        <input type="submit" value="Add">
+    </form>
 
     </section>
 
   </div>
-  <script src="tuneloader.js" type="text/javascript" charset="utf-8" async defer></script>
+  <script src="tuneLoader.js" type="text/javascript" charset="utf-8" async defer></script>
+  <script src="home.js" type="text/javascript" charset="utf-8" async defer></script>  
   <script src="tunes.js" type="text/javascript" charset="utf-8" async defer></script>  
+  <script src="addTune.js" type="text/javascript" charset="utf-8" async defer></script>  
 </body>
   
 </html>
