@@ -4,7 +4,8 @@
 var Pickin = (function (xhr) {
   'use strict';
 
-  // console.log("tuneLoader.js: 6 -  ");
+  console.log("tuneLoader.js:7 - Pickin = ", Pickin);
+  console.log("tuneLoader.js:8 - xhr = ", xhr);
 
   // all the code contained in this 
   // "function (cb) {..." needs to be inside 

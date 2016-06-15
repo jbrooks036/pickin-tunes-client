@@ -9,11 +9,13 @@
 
 <body>
   <nav id="navbar">
-    <a href="#" id="link-home">Home</a> 
+    <!-- <a href="#" id="link-home">Home</a>  -->
     <a href="#" id="link-list-tunes">View Tunes</a> 
     <a href="#" id="link-add-tune">Add Tune</a> 
-    <a href="profile.html">Profile</a>
   </nav>
+  <div>
+    <h2>Pickin' Tunes</h2>  
+  </div>
 
   <div id="display-body">
     <section id="choose-panel">
@@ -37,7 +39,7 @@
       <button type="button">Filter</button>
     </section>
 
-    <section id="list-tunes-view" class="hidden">
+    <section id="list-tunes-view" class="visible">
       <h2> Tunes </h2>
       <hr>
     
@@ -47,8 +49,8 @@
       </div> 
       <hr>
 
-      <h3 id=song2-title>Song 2 Title</h3>
-      <p> by <span id="song2-artist" class="xtra">Artist2-Name </span> on the album <span id="song2-album" class="xtra">Album2</span></p> 
+      <h3 id=song2-title></h3>
+      <p> by <span id="song2-artist" class="xtra"></span> on the album <span id="song2-album" class="xtra"></span></p> 
      <hr>
       
       <h3 id=song3-title>Song 3 Title</h3>
@@ -67,10 +69,13 @@
     </section>
 
   </div>
+  <script src="https://code.jquery.com/jquery-3.0.0.min.js"></script>
   <script src="tuneLoader.js" type="text/javascript" charset="utf-8"></script>
-  <script src="home.js" type="text/javascript" charset="utf-8" async defer></script>  
-  <script src="tunes.js" type="text/javascript" charset="utf-8" async defer></script>  
-  <script src="addForm.js" type="text/javascript" charset="utf-8" async defer></script>  
+  <script src="tunesToDom.js" type="text/javascript" charset="utf-8"></script>
+  <script src="home.js" type="text/javascript" charset="utf-8"></script>  
+  <script src="tunes.js" type="text/javascript" charset="utf-8"></script>  
+<!--   <script src="dom.js" type="text/javascript" charset="utf-8"></script>   -->
+  <script src="addForm.js" type="text/javascript" charset="utf-8"></script>  
 </body>
   
 </html>
