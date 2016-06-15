@@ -4,7 +4,7 @@
   console.log("home.js: 3 - Pickin = ", Pickin);
   
 	var homeLink = document.getElementById("link-home");
-  var homeView = document.getElementById("home-view");
+  var homeView = document.getElementById("choose-panel");
   var listView = document.getElementById("list-tunes-view");
   var addView = document.getElementById("add-tune-view");
 

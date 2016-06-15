@@ -1,7 +1,7 @@
 var Pickin = (function (newTune) {
-'use strict';
+  'use strict';
 
-  console.log("tuneCreator.js: 3 -  newTune = ", newTune);
+  console.log("createTune.js: 3 -  newTune = ", newTune);
 
   // need to call Pickin.getTunes w/ a callback 
   // because JSON loads asynchronously
