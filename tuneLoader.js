@@ -2,6 +2,7 @@
 //from the JSON file into tuneArray
 
 var Pickin = (function (xhr) {
+  'use strict';
 
   // console.log("tuneLoader.js: 6 -  ");
 
@@ -32,11 +33,11 @@ var Pickin = (function (xhr) {
       // get the json 
       var jsonObj = JSON.parse(this.responseText);
 
-//      console.log("tuneLoader.js: 30 - jsonObj = ", jsonObj);
+      // console.log("tuneLoader.js: 30 - jsonObj = ", jsonObj);
 
       var numTunes = jsonObj.tunes.length;
 
-      for (i = 0; i < numTunes; i++) {
+      for (var i = 0; i < numTunes; i++) {
         tuneArray.push(jsonObj.tunes[i]);
 //        console.log("tuneLoader.js: 36 - tuneArray = ", tuneArray);
       }

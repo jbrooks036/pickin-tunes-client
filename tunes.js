@@ -1,4 +1,5 @@
-var Pickin = (function () {
+(function () {
+  'use strict';
 
   console.log("tunes.js: 3 - Pickin = ", Pickin);
   
@@ -6,16 +7,18 @@ var Pickin = (function () {
   console.log("listLink = ", listLink);
   var listView = document.getElementById("list-tunes-view");
   console.log("listLink = ", listView);
+  var addView = document.getElementById("add-tune-view");
+  console.log("listLink = ", listView);
 
 	// need to call Pickin.getTunes w/ a callback 
   // because JSON loads asynchronously
 	Pickin.getTunes(function (tunes) {
-//		console.log("tunes.js:13 - tunes = ", tunes); // confirm they're in the array
+    // console.log("tunes.js:13 - tunes = ", tunes); // confirm they're in the array
 
 		listLink.addEventListener("click", function() {
 
-//      console.log("tunes.js:17 - tunes = ", tunes); // confirm they're in the array
-      homeView.classList.add("hidden");
+      // console.log("tunes.js:17 - tunes = ", tunes); // confirm they're in the array
+      // homeView.classList.add("hidden");
       addView.classList.add("hidden");
 
       listView.classList.add("visible");
@@ -55,4 +58,4 @@ var Pickin = (function () {
 
 
 
-})(Pickin || {});
+})();
