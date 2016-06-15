@@ -10,7 +10,6 @@
 	addLink.addEventListener("click", function() {
     console.log("addForm.js:10");
 
-    // homeView.classList.add("hidden");
     listView.classList.add("hidden");
 
     addView.classList.add("visible");

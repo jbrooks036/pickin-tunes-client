@@ -1,5 +1,5 @@
 // this module loads the tunes 
-//from the JSON file into tuneArray
+//from the tunes array into the DOM
 
 var Pickin = (function (pickin) {
   'use strict';

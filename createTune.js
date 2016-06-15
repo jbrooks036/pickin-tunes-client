@@ -1,7 +1,7 @@
 var Pickin = (function (newTune) {
   'use strict';
 
-  console.log("createTune.js: 3 -  newTune = ", newTune);
+  console.log("createTune.js: 4 -  newTune = ", newTune);
 
   // need to call Pickin.getTunes w/ a callback 
   // because JSON loads asynchronously
@@ -12,10 +12,11 @@ var Pickin = (function (newTune) {
     var addView = document.getElementById("add-tune-view");
 
     addLink.addEventListener("click", function() {
-      console.log("addTune.js:14 ");
+      console.log("createTune.js:15");
       
     });
   })
+
   // all done
   return newTune;
 
