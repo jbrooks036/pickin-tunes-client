@@ -30,7 +30,7 @@ var Pickin = (function (pickin) {
       cumTable += tableRow;
     }
 
-    tunesTable.innerHTML += cumTable;
+    tunesTable.innerHTML = cumTable;
   }
 
   // all done
