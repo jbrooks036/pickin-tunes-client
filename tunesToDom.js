@@ -12,8 +12,8 @@ var Pickin = (function (pickin) {
     console.log("tunesToDom.js:12 - tunes = ", tunes);
 
     var tunesTable = document.getElementById("tunes-table");
-    var cumTable = "";
     var numTunes = tunes.length;
+    var cumTable = "<thead><tr><th>Id</th><th>Artist</th><th>Title</th><th>Album</th></tr></thead>";
 
     for (var i = 0; i < numTunes; i++)
     {
