@@ -3,8 +3,10 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>PickinTunes</title>
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+
 </head>
 
 <body>
@@ -16,8 +18,8 @@
     <h2>Pickin' Tunes</h2>  
   </div>
 
-  <div id="display-body">
-    <section id="choose-panel">
+  <div id="display-body" class="container">
+    <section id="choose-panel" class="col-md-4">
       <h2> Choose Panel </h2>
       <div id="artist">
         <label for="select-artist">Select Artist</label>
@@ -38,17 +40,17 @@
       <button type="button">Filter</button>
     </section>
 
-    <section id="list-tunes-view" class="visible">
+    <section id="list-tunes-view" class="visible col-md-8">
       <h2> Tunes </h2>
-      <table id="tunes-table">
+      <table id="tunes-table" class="table-striped">
       </table>
     </section>
 
-    <section id="add-tune-view" class="hidden"> 
+    <section id="add-tune-view" class="hidden  col-md-8"> 
       <h2> Add a Tune</h2>
  
         Artist:<br>
-        <input type="text" name="artist-name" value="add artist name here" id="artist-name">
+        <input type="text" name="artist-name" placeholder="add artist name here" id="artist-name">
         <br><br>
         Tune Title:<br>
         <input type="text" name="tune-title" value="add tune title here" id="tune-title">
@@ -63,11 +65,16 @@
   </div>  
 
 
+  <!-- jQuery library -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+
+  <!-- Latest compiled JavaScript -->
+  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+
   <script src="https://code.jquery.com/jquery-3.0.0.min.js"></script>
   <script src="tuneLoader.js" type="text/javascript" charset="utf-8"></script>
   <script src="tunesToDom.js" type="text/javascript" charset="utf-8"></script>
-<!--   <script src="home.js" type="text/javascript" charset="utf-8"></script>  
- -->  <script src="tunes.js" type="text/javascript" charset="utf-8"></script>  
+  <script src="tunes.js" type="text/javascript" charset="utf-8"></script>  
   <script src="addForm.js" type="text/javascript" charset="utf-8"></script>  
 </body>
   

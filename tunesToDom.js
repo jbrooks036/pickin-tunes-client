@@ -14,7 +14,9 @@ var Pickin = (function (pickin) {
     var tunesTable = document.getElementById("tunes-table");
     var numTunes = tunes.length;
     // var cumTable = "<thead><tr><th>Id</th><th>Artist</th><th>Title</th><th>Album</th></tr></thead>";
+    var cumTable = "<thead><tr><th>Id</th><th>Title</th></tr></thead>";
 
+    // populate table
     for (var i = 0; i < numTunes; i++)
     {
       console.log("tunes[i] = ", i, tunes[i]);
@@ -28,6 +30,7 @@ var Pickin = (function (pickin) {
         + "</td></tr>";
       console.log("tableRow[i] = ", i, tunes[i]);
       cumTable += tableRow;
+
     }
 
     tunesTable.innerHTML = cumTable;
