@@ -13,18 +13,18 @@ var Pickin = (function (pickin) {
 
     var tunesTable = document.getElementById("tunes-table");
     var numTunes = tunes.length;
-    var cumTable = "<thead><tr><th>Id</th><th>Artist</th><th>Title</th><th>Album</th></tr></thead>";
+    // var cumTable = "<thead><tr><th>Id</th><th>Artist</th><th>Title</th><th>Album</th></tr></thead>";
 
     for (var i = 0; i < numTunes; i++)
     {
       console.log("tunes[i] = ", i, tunes[i]);
-      var tableRow = "<tr><td>" + tunes[i].id
+      var tableRow = "<tr><td>" + tunes[i].TuneId
+        // + "</td><td>"
+        // + tunes[i].artist
         + "</td><td>"
-        + tunes[i].artist
-        + "</td><td>"
-        + tunes[i].title
-        + "</td><td>"
-        + tunes[i].album
+        + tunes[i].TuneTitle
+        // + "</td><td>"
+        // + tunes[i].album
         + "</td></tr>";
       console.log("tableRow[i] = ", i, tunes[i]);
       cumTable += tableRow;
