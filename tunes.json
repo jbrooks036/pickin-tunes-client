@@ -1,24 +1,24 @@
 {
 	"tunes": [
     {
-      "id" : "1",
-      "title":"Clinch Mountain Backstep", 
-      "artist": "Ralph Stanley", 
-      "album": "Best of the Best"
+      "TuneId" : "1",
+      "TuneTitle":"Clinch Mountain Backstep", 
+      "Artist": "Ralph Stanley", 
+      "Album": "Best of the Best"
     },
 
   	{
-      "id" : "2",
-      "title":"Shady Grove", 
-      "artist": "The Ebony Hillbillies", 
-      "album": "Barefoot and Flying"
+      "TuneId" : "2",
+      "TuneTitle":"Shady Grove", 
+      "Artist": "The Ebony Hillbillies", 
+      "Album": "Barefoot and Flying"
     },
 
   	{
-      "id" : "3",
-      "title":"Caught in the Crossfire", 
-      "artist": "Rhonda Jo", 
-      "album": "One Step Ahead"
+      "TuneId" : "3",
+      "TuneTitle":"Caught in the Crossfire", 
+      "Artist": "Rhonda Jo", 
+      "Album": "One Step Ahead"
     }
   ]
 }

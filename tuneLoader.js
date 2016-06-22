@@ -24,7 +24,7 @@ var Pickin = (function (xhr) {
     loader.addEventListener("load", fetchTunes);
 
     // now do the actual load from JSON file
-    loader.open("GET", "tunes.json");
+    loader.open("GET", "http://localhost:5000/api/tune");
     loader.send();
 
     // function to extract tunes from JSON object 
@@ -36,10 +36,10 @@ var Pickin = (function (xhr) {
 
       // console.log("tuneLoader.js: 30 - jsonObj = ", jsonObj);
 
-      var numTunes = jsonObj.tunes.length;
+      var numTunes = jsonObj.length;
 
       for (var i = 0; i < numTunes; i++) {
-        tuneArray.push(jsonObj.tunes[i]);
+        tuneArray.push(jsonObj[i]);
 //        console.log("tuneLoader.js: 36 - tuneArray = ", tuneArray);
       }
 
