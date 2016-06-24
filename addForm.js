@@ -36,7 +36,7 @@
         }
     };
     xhr.send(JSON.stringify({
-      TuneTitle: 'titleInputValue.value'
+      TuneTitle: titleInputValue.value
     }));
 
     artistInputValue.innerHTML = "";
