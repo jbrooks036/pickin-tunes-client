@@ -26,6 +26,19 @@
     console.log("add button clicked, title = ", titleInputValue.value);
     console.log("add button clicked, album = ", albumInputValue.value);
 
+
+    var xhr = new XMLHttpRequest();
+    xhr.open('POST', 'http://localhost:5000/api/tune');
+    xhr.setRequestHeader('Content-Type', 'application/json');
+    xhr.onload = function() {
+        if (xhr.status === 200) {
+            var tune = JSON.parse(xhr.responseText);
+        }
+    };
+    xhr.send(JSON.stringify({
+      TuneTitle: titleInputValue.value
+    }));
+
     artistInputValue.innerHTML = "";
   })
 
