@@ -19,7 +19,7 @@ var Pickin = (function (pickin) {
     // populate table
     for (var i = 0; i < numTunes; i++)
     {
-      console.log("tunes[i] = ", i, tunes[i]);
+      // console.log("tunes[i] = ", i, tunes[i]);
       var tableRow = "<tr><td>" + tunes[i].TuneId
         // + "</td><td>"
         // + tunes[i].artist
@@ -32,9 +32,29 @@ var Pickin = (function (pickin) {
       cumTable += tableRow;
 
     }
-
     tunesTable.innerHTML = cumTable;
+
+    // add click handlers to table rows to support selection
+    var rows = tunesTable.getElementsByTagName("tr");
+    console.log("rows = ", rows);
+    for (i = 0; i < rows.length; i++) {
+      var currentRow = tunesTable.rows[i];
+      var createClickHandler = 
+        function(row) {
+          console.log("inside createClickHandler");
+          return function() { 
+            console.log("clickHandler called");
+            var cell = row.getElementsByTagName("td")[0];
+            var id = cell.innerHTML;
+            alert("id:" + id);
+          };
+        };
+      currentRow.onclick = createClickHandler(currentRow);
+    }
+
   }
+
+
 
   // all done
   return pickin;
