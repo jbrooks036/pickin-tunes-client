@@ -25,7 +25,8 @@ var Pickin = (function (pickin) {
         // + tunes[i].artist
         + "</td><td>"
         + tunes[i].TuneTitle
-        // + "</td><td>"
+        + "</td><td>"
+        + "<button type=&quot;button&quot; class=&quot;btn btn-default btn-xs&quot;>Delete</button>" 
         // + tunes[i].album
         + "</td></tr>";
       console.log("tableRow[i] = ", i, tunes[i]);
@@ -34,9 +35,11 @@ var Pickin = (function (pickin) {
     }
     tunesTable.innerHTML = cumTable;
 
-    // add click handlers to table rows to support selection
+    // now prepare to sensitize the rows
     var rows = tunesTable.getElementsByTagName("tr");
     console.log("rows = ", rows);
+
+    // first add click handlers to table rows in support of selection
     for (i = 0; i < rows.length; i++) {
       var currentRow = tunesTable.rows[i];
       var createClickHandler = 
@@ -51,6 +54,25 @@ var Pickin = (function (pickin) {
         };
       currentRow.onclick = createClickHandler(currentRow);
     }
+
+/*
+    // and then add "Delete" buttons
+    for (i = 0; i < rows.length; i++) {
+      var currentRow = tunesTable.rows[i];
+      var createClickHandler = 
+        function(row) {
+          console.log("inside createClickHandler");
+          return function() { 
+            console.log("clickHandler called");
+            var cell = row.getElementsByTagName("td")[0];
+            var id = cell.innerHTML;
+            alert("id:" + id);
+          };
+        };
+      currentRow.onclick = createClickHandler(currentRow);
+    }
+*/
+
 
   }
 
