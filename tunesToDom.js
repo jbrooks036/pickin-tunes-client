@@ -19,24 +19,34 @@ var Pickin = (function (pickin) {
     // populate table
     for (var i = 0; i < numTunes; i++)
     {
-      // console.log("tunes[i] = ", i, tunes[i]);
-      var tableRow = "<tr><td>" + tunes[i].TuneId
+      var tuneId = tunes[i].TuneId;
+      // console.log("tuneId = ", tuneId);
+      var str = "id=" + tuneId;
+      console.log("str = ", str);
+      console.log("long phrase = ",  "<button type=&quot;button&quot; class=&quot;btn btn-default btn-xs &quot;;");
+      var tableRow = "<tr><td>" + tuneId
         // + "</td><td>"
         // + tunes[i].artist
         + "</td><td>"
         + tunes[i].TuneTitle
-        // + "</td><td>"
-        // + tunes[i].album
+        + "</td><td>"
+//        + "<button type=&quot;button&quot; class=&quot;btn btn-default btn-xs&quot; id=tuneId;>Delete</button>" 
+        + "<button type=&quot;button&quot; class=&quot;btn btn-default btn-xs &quot; ;"
+        + str 
+        + ">Delete</button>" 
+          // + tunes[i].album
         + "</td></tr>";
-      console.log("tableRow[i] = ", i, tunes[i]);
+      console.log("tableRow[i] = ", i, tableRow);
       cumTable += tableRow;
 
     }
     tunesTable.innerHTML = cumTable;
 
-    // add click handlers to table rows to support selection
+    // now prepare to sensitize the rows
     var rows = tunesTable.getElementsByTagName("tr");
     console.log("rows = ", rows);
+
+    // first add click handlers to table rows in support of selection
     for (i = 0; i < rows.length; i++) {
       var currentRow = tunesTable.rows[i];
       var createClickHandler = 
@@ -50,6 +60,35 @@ var Pickin = (function (pickin) {
           };
         };
       currentRow.onclick = createClickHandler(currentRow);
+    }
+
+    // to setup Delete click handlers, first get all the Delete buttons
+    var tableDeleteButtons = tunesTable.getElementsByTagName("button");
+    console.log("tableDeleteButtons = ", tableDeleteButtons);
+
+    // then attach delete functionality to each Delete button
+    for (i = 0; i < numTunes; i++) {
+
+      // create the clickhandler
+      var createDeleteClickHandler = 
+        function(button) {
+          console.log("inside createDeleteClickHandler");
+          return function() { 
+            console.log("returning function on button ", button);
+            var idStrings = button.getElementsByTagName("id");
+            var deleteId = parseInt(idStrings[0]);
+            alert("deleteId:" + deleteId);
+          };
+        };
+
+      // get the Delete button
+      var currentDeleteButton = tableDeleteButtons[i];
+      console.log("currentDeleteButton = ", currentDeleteButton);
+
+      // and attach the clickhandler
+      currentDeleteButton.onclick = createDeleteClickHandler(currentDeleteButton);
+      console.log("currentDeleteButton = ", currentDeleteButton);
+
     }
 
   }
