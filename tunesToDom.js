@@ -22,7 +22,7 @@ var Pickin = (function (pickin) {
       var tuneId = tunes[i].TuneId;
       // console.log("tuneId = ", tuneId);
       var str = "id=" + tuneId;
-      console.log("str = ", str);
+      // console.log("str = ", str);
       console.log("long phrase = ",  "<button type=&quot;button&quot; class=&quot;btn btn-default btn-xs &quot;;");
       var tableRow = "<tr><td>" + tuneId
         // + "</td><td>"
@@ -31,7 +31,7 @@ var Pickin = (function (pickin) {
         + tunes[i].TuneTitle
         + "</td><td>"
 //        + "<button type=&quot;button&quot; class=&quot;btn btn-default btn-xs&quot; id=tuneId;>Delete</button>" 
-        + "<button type=&quot;button&quot; class=&quot;btn btn-default btn-xs &quot; ;"
+        + "<button type=button class='btn btn-default btn-xs' "
         + str 
         + ">Delete</button>" 
           // + tunes[i].album
@@ -72,22 +72,23 @@ var Pickin = (function (pickin) {
       // create the clickhandler
       var createDeleteClickHandler = 
         function(button) {
-          console.log("inside createDeleteClickHandler");
+          // console.log("inside createDeleteClickHandler");
           return function() { 
             console.log("returning function on button ", button);
             var idStrings = button.getElementsByTagName("id");
             var deleteId = parseInt(idStrings[0]);
             alert("deleteId:" + deleteId);
+            console.log("currentDeleteButton = ", currentDeleteButton);
           };
         };
 
       // get the Delete button
       var currentDeleteButton = tableDeleteButtons[i];
-      console.log("currentDeleteButton = ", currentDeleteButton);
+      // console.log("currentDeleteButton = ", currentDeleteButton);
 
       // and attach the clickhandler
       currentDeleteButton.onclick = createDeleteClickHandler(currentDeleteButton);
-      console.log("currentDeleteButton = ", currentDeleteButton);
+      
 
     }
 
