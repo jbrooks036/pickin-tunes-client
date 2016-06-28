@@ -4,12 +4,12 @@
 var Pickin = (function (pickin) {
   'use strict';
 
-  console.log("tunesToDom.js:7 - Pickin = ", Pickin);
-  console.log("tunesToDom.js:8 - pickin = ", pickin);
+  // console.log("tunesToDom.js:7 - Pickin = ", Pickin);
+  // console.log("tunesToDom.js:8 - pickin = ", pickin);
 
   pickin.tunesToDom = function (tunes) {
 
-    console.log("tunesToDom.js:12 - tunes = ", tunes);
+    // console.log("tunesToDom.js:12 - tunes = ", tunes);
 
     var tunesTable = document.getElementById("tunes-table");
     var numTunes = tunes.length;
@@ -23,7 +23,7 @@ var Pickin = (function (pickin) {
       // console.log("tuneId = ", tuneId);
       var str = "id=" + tuneId;
       // console.log("str = ", str);
-      console.log("long phrase = ",  "<button type=&quot;button&quot; class=&quot;btn btn-default btn-xs &quot;;");
+      // console.log("long phrase = ",  "<button type=&quot;button&quot; class=&quot;btn btn-default btn-xs &quot;;");
       var tableRow = "<tr><td>" + tuneId
         // + "</td><td>"
         // + tunes[i].artist
@@ -49,17 +49,17 @@ var Pickin = (function (pickin) {
     // first add click handlers to table rows in support of selection
     for (i = 0; i < rows.length; i++) {
       var currentRow = tunesTable.rows[i];
-      var createClickHandler = 
+      var createRowClickHandler = 
         function(row) {
-          console.log("inside createClickHandler");
+          // console.log("inside createClickHandler");
           return function() { 
-            console.log("clickHandler called");
+            console.log("RowClickHandler called");
             var cell = row.getElementsByTagName("td")[0];
             var id = cell.innerHTML;
-            alert("id:" + id);
+            console.log("RowClick/rowId:" + id);
           };
         };
-      currentRow.onclick = createClickHandler(currentRow);
+      currentRow.onclick = createRowClickHandler(currentRow);
     }
 
     // to setup Delete click handlers, first get all the Delete buttons
@@ -72,24 +72,23 @@ var Pickin = (function (pickin) {
       // create the clickhandler
       var createDeleteClickHandler = 
         function(button) {
-          // console.log("inside createDeleteClickHandler");
+          console.log("createDeleteClickHandler: button = ", button);
           return function() { 
-            console.log("returning function on button ", button);
-            var idStrings = button.getElementsByTagName("id");
-            var deleteId = parseInt(idStrings[0]);
-            alert("deleteId:" + deleteId);
-            console.log("currentDeleteButton = ", currentDeleteButton);
+            console.log("DeleteClickHandler called on button:", button);
+            var idString = button.id;
+            console.log("idString = ", idString);
+            var deleteId = parseInt(idString);
+            console.log("DeleteClick/deleteId:" + deleteId);
           };
         };
 
       // get the Delete button
       var currentDeleteButton = tableDeleteButtons[i];
-      // console.log("currentDeleteButton = ", currentDeleteButton);
+      // console.log("87:currentDeleteButton = ", currentDeleteButton);
 
       // and attach the clickhandler
       currentDeleteButton.onclick = createDeleteClickHandler(currentDeleteButton);
       
-
     }
 
   }
