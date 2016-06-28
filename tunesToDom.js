@@ -74,25 +74,35 @@ var Pickin = (function (pickin) {
         function(button) {
           console.log("createDeleteClickHandler: button = ", button);
           return function() { 
+            // first get the tuneId from the Delete button
             console.log("DeleteClickHandler called on button:", button);
             var idString = button.id;
             console.log("idString = ", idString);
             var deleteId = parseInt(idString);
             console.log("DeleteClick/deleteId:" + deleteId);
+
+            // then send the xhr request for deleting that tune to backend
+            var xhr = new XMLHttpRequest();
+            var urlAddr = 'http://localhost:5000/api/tune/' + deleteId;
+            console.log ("urlAddr = ", urlAddr); 
+            xhr.open('DELETE', urlAddr);
+            xhr.setRequestHeader('Content-Type', 'application/json');
+            xhr.onload = function() {
+                console.log("xhr.status = ", xhr.status);
+                }
+            };
+            xhr.send();
+
           };
         };
 
-      // get the Delete button
+      // get the Delete button and attach the clickhandler
       var currentDeleteButton = tableDeleteButtons[i];
-      // console.log("87:currentDeleteButton = ", currentDeleteButton);
-
-      // and attach the clickhandler
       currentDeleteButton.onclick = createDeleteClickHandler(currentDeleteButton);
       
     }
 
   }
-
 
 
   // all done
