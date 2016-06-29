@@ -1,7 +1,5 @@
 (function () {
   'use strict';
-
-  console.log("tunes.js: 3 - Pickin = ", Pickin);
   
   var listLink = document.getElementById("link-list-tunes");
   var listView = document.getElementById("list-tunes-view");

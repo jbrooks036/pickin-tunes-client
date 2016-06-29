@@ -4,9 +4,6 @@
 var Pickin = (function (xhr) {
   'use strict';
 
-  console.log("tuneLoader.js:7 - Pickin = ", Pickin);
-  console.log("tuneLoader.js:8 - xhr = ", xhr);
-
   // all the code contained in this 
   // "function (cb) {..." needs to be inside 
   // the "{ ... }" because otherwise 
@@ -28,24 +25,19 @@ var Pickin = (function (xhr) {
     loader.send();
 
     // function to extract tunes from JSON object 
-    // and put it into a local (private) array ??
+    // and put it into a local (private) array for the callback
     function fetchTunes() {
 
-      // get the json 
       var jsonObj = JSON.parse(this.responseText);
 
-      // console.log("tuneLoader.js: 30 - jsonObj = ", jsonObj);
-
       var numTunes = jsonObj.length;
-
       for (var i = 0; i < numTunes; i++) {
         tuneArray.push(jsonObj[i]);
-//        console.log("tuneLoader.js: 36 - tuneArray = ", tuneArray);
       }
 
       cb(tuneArray)
     }
-
+    
   }
 
   // all done
