@@ -42,7 +42,7 @@ var Pickin = (function (pickin) {
     }
     tunesTable.innerHTML = cumTable;
 
-    // now prepare to sensitize the rows
+    // now prepare to sensitize the row elements
     var rows = tunesTable.getElementsByTagName("tr");
     console.log("rows = ", rows);
 
@@ -89,7 +89,8 @@ var Pickin = (function (pickin) {
             xhr.open('DELETE', urlAddr);
             xhr.setRequestHeader('Content-Type', 'application/json');
             xhr.onload = function() {
-                console.log("xhr.status = ", xhr.status);
+              console.log("xhr.status = ", xhr.status);
+              Pickin.getTunes(Pickin.tunesToDom);
             };
             xhr.send();
 
