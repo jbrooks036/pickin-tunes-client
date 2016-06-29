@@ -56,7 +56,7 @@ var Pickin = (function (pickin) {
             console.log("RowClickHandler called");
             var cell = row.getElementsByTagName("td")[0];
             var id = cell.innerHTML;
-            console.log("RowClick/rowId:" + id);
+            console.log("RowClick/tuneId:" + id);
           };
         };
       currentRow.onclick = createRowClickHandler(currentRow);
@@ -77,19 +77,19 @@ var Pickin = (function (pickin) {
             // first get the tuneId from the Delete button
             console.log("DeleteClickHandler called on button:", button);
             var idString = button.id;
-            console.log("idString = ", idString);
-            var deleteId = parseInt(idString);
-            console.log("DeleteClick/deleteId:" + deleteId);
+            // console.log("idString = ", idString);
+            var tuneId = parseInt(idString);
+            console.log("DeleteClick/tuneId:" + tuneId);
+
 
             // then send the xhr request for deleting that tune to backend
             var xhr = new XMLHttpRequest();
-            var urlAddr = 'http://localhost:5000/api/tune/' + deleteId;
+            var urlAddr = 'http://localhost:5000/api/tune/' + tuneId;
             console.log ("urlAddr = ", urlAddr); 
             xhr.open('DELETE', urlAddr);
             xhr.setRequestHeader('Content-Type', 'application/json');
             xhr.onload = function() {
                 console.log("xhr.status = ", xhr.status);
-                }
             };
             xhr.send();
 
