@@ -4,7 +4,7 @@
 var Pickin = (function (xhr) {
   'use strict';
 
-  // all the code contained in this 
+  // all the code contained inside this 
   // "function (cb) {..." needs to be inside 
   // the "{ ... }" because otherwise 
   // e.g. the "cb(tuneArray)" call would get executed
