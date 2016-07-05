@@ -4,7 +4,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>PickinTunes</title>
+  <title class="page-title">PickinTunes</title>
   <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
   <link rel="stylesheet" href="style.css">
 
@@ -14,6 +14,7 @@
   <nav id="navbar">
     <a href="#" id="link-list-tunes">View Tunes</a> 
     <a href="#" id="link-add-tune">Add Tune</a> 
+    <a href="#" id="link-add-artist">Add Artist</a> 
   </nav>
   <div>
     <h2>Pickin' Tunes</h2>  
@@ -56,12 +57,35 @@
         Tune Title:<br>
         <input type="text" name="tune-title" value="add tune title here" id="tune-title">
         <br><br>
-        Album:<br>
+<!--         Album:<br>
         <input type="text" name="album-title" value="add album title here" id="album-title">
         <br><br>
+ -->
+        <form action="http://localhost:5000/api/tune">
+          Artist:<br>
+          <input type="text" name="artist-name" placeholder="add artist name here" id="artist-name">
+          <br><br>
+          Tune Title:<br>
+          <input type="text" name="tune-title" value="add tune title here" id="tune-title">
+          <br><br>
+          <input type="submit" value="Add">          
+        </form>
+    </section>
 
-        <input type="button" value="Add" id="add-button">
+    <section id="add-artist-view" class="hidden  col-md-8"> 
+      <h2> Add an Artist</h2>
  
+        Artist:<br>
+        <input type="text" name="artist-name" placeholder="add artist name here" id="artist-name">
+        <br><br>
+ 
+        <form action="http://localhost:5000/api/artist">
+          Artist:<br>
+          <input type="text" name="artist-name" placeholder="add artist name here" id="artist-name">
+          <br><br>
+          <input type="submit" value="Add">          
+        </form>
+
     </section>
   </div>  
 
@@ -76,7 +100,8 @@
   <script src="tuneLoader.js" type="text/javascript" charset="utf-8"></script>
   <script src="tunesToDom.js" type="text/javascript" charset="utf-8"></script>
   <script src="tunes.js" type="text/javascript" charset="utf-8"></script>  
-  <script src="addForm.js" type="text/javascript" charset="utf-8"></script>  
+  <script src="addTune.js" type="text/javascript" charset="utf-8"></script> 
+  <script src="addArtist.js" type="text/javascript" charset="utf-8"></script>  
 </body>
   
 </html>
