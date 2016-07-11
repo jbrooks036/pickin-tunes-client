@@ -6,7 +6,7 @@
   var addArtistLink = document.getElementById("link-add-artist");
   var addArtistView = document.getElementById("add-artist-view");
   var listView = document.getElementById("list-tunes-view");
-  var artistInputValue = document.getElementById("artist-name");
+  var artistInputValue = document.getElementById("tune-artist-name");
   var titleInputValue = document.getElementById("tune-title");
   var albumInputValue = document.getElementById("album-title");
 
@@ -32,7 +32,7 @@
     xhr.setRequestHeader('Content-Type', 'application/json');
     xhr.onload = function() {
                           Pickin.getTunes(Pickin.tunesToDom);
-                          addTuneView.classList.add("hidden");
+//                          addTuneView.classList.add("hidden");
                           listView.classList.add("visible");
                           listView.classList.remove("hidden");
                   };

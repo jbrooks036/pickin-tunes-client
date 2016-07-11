@@ -57,13 +57,14 @@
         Tune Title:<br>
         <input type="text" name="tune-title" value="add tune title here" id="tune-title">
         <br><br>
+        <input type="button" value="Add" id="add-tune-button">
 <!--         Album:<br>
         <input type="text" name="album-title" value="add album title here" id="album-title">
-        <br><br>
- -->
+ -->    <br><br>
+
         <form action="http://localhost:5000/api/tune">
           Artist:<br>
-          <input type="text" name="artist-name" placeholder="add artist name here" id="artist-name">
+          <input type="text" name="tune-artist-name" placeholder="add artist name here" id="tune-artist-name">
           <br><br>
           Tune Title:<br>
           <input type="text" name="tune-title" value="add tune title here" id="tune-title">
@@ -76,7 +77,9 @@
       <h2> Add an Artist</h2>
  
         Artist:<br>
-        <input type="text" name="artist-name" placeholder="add artist name here" id="artist-name">
+        <input type="text" name="add-artist-name" placeholder="add artist name here" id="add-artist-name">
+        <br><br>
+        <input type="button" value="Add" id="add-artist-button">
         <br><br>
  
         <form action="http://localhost:5000/api/artist">
