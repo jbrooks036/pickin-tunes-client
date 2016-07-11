@@ -6,7 +6,7 @@
   var addArtistLink = document.getElementById("link-add-artist");
   var addArtistView = document.getElementById("add-artist-view");
   var listView = document.getElementById("list-tunes-view");
-  var artistInputValue = document.getElementById("artist-name");
+  var artistInputValue = document.getElementById("add-artist-name");
   var titleInputValue = document.getElementById("tune-title");
   var albumInputValue = document.getElementById("album-title");
 
@@ -36,8 +36,9 @@
                           listView.classList.add("visible");
                           listView.classList.remove("hidden");
                   };
+    console.log("ArtistName: ", artistInputValue.value);
     xhr.send(JSON.stringify({
-      TuneTitle: titleInputValue.value
+      ArtistName: artistInputValue.value
     }));
 
     artistInputValue.innerHTML = "";
