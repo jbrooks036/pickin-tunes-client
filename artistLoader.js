@@ -11,6 +11,8 @@ var Pickin = (function (xhr) {
   // before the JSON fetch happened. 
   xhr.getArtists = function (cb) {
 
+    console.log("cb-14 = ", cb);
+
     // an array to hold artists 
     var artistArray = [];
 
@@ -35,7 +37,9 @@ var Pickin = (function (xhr) {
         artistArray.push(jsonObj[i]);
       }
 
-      cb(artistArray)
+      console.log("cb-40 = ", cb);
+
+      cb(artistArray);
     }
     
   }
