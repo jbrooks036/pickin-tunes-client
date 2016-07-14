@@ -4,7 +4,7 @@
 var Pickin = (function (pickin) {
   'use strict';
 
-  pickin.tunesToDom = function (artists) {
+  pickin.artistsToDom = function (artists) {
     console.log("artists = ", artists);
   }
 
