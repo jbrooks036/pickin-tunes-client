@@ -16,13 +16,18 @@ var Pickin = (function (pickin) {
 
     for (var i=0; i < numArtists; i++)
     {
-      var nextArtist = artists[i].ArtistName;
+      var nextArtistName = artists[i].ArtistName;
+      var nextArtistValue = artists[i].ArtistId;
       option = document.createElement("option");
-      option.value = nextArtist;
-      option.innerHTML = nextArtist;
+      option.value = nextArtistValue;
+      option.innerHTML = nextArtistName;
       artistSelect.appendChild(option);
+      console.log(option);
     }
   }
+
+  // artistSelect.selectedIndex
+  // artistSelect.value
 
   // all done
   return pickin;
