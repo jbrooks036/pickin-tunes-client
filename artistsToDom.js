@@ -9,6 +9,8 @@ var Pickin = (function (pickin) {
     var numArtists = artists.length;
 
     var artistSelect = document.getElementById("select-artist");
+    artistSelect.options.length = 0;
+
     var option = null;
     var nextArtist = null;
 
