@@ -35,7 +35,7 @@ var Pickin = (function (xhr) {
         tuneArray.push(jsonObj[i]);
       }
 
-      cb(tuneArray)
+      cb(tuneArray);
     }
     
   }
