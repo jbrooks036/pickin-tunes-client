@@ -4,11 +4,11 @@
 var Pickin = (function (pickin) {
   'use strict';
 
-  pickin.artistsToDom = function (artists) {
+  pickin.artistsToDomFilter = function (artists) {
     console.log("artists = ", artists);
     var numArtists = artists.length;
 
-    var artistSelect = document.getElementById("select-artist");
+    var artistSelect = document.getElementById("filter-select-artist");
     artistSelect.options.length = 0;
 
     var option = null;
