@@ -8,8 +8,10 @@ var Pickin = (function (pickin) {
     console.log("artists = ", artists);
     var numArtists = artists.length;
 
-    var artistSelect = document.getElementById("filter-select-artist");
-    artistSelect.options.length = 0;
+    var filterArtistSelect = document.getElementById("filter-select-artist");
+//    var addTuneArtistSelect = document.getElementById("add-tune-select-artist");
+    filterArtistSelect.options.length = 0;
+//    addTuneArtistSelect.options.length = 0;
 
     var option = null;
     var nextArtist = null;
@@ -21,7 +23,8 @@ var Pickin = (function (pickin) {
       option = document.createElement("option");
       option.value = nextArtistValue;
       option.innerHTML = nextArtistName;
-      artistSelect.appendChild(option);
+      filterArtistSelect.appendChild(option);
+//      addTuneArtistSelect.appendChild(option);
       console.log(option);
     }
   }
