@@ -1,7 +1,7 @@
 (function () {
   'use strict';
   
-  var selectArtist = document.getElementById("select-artist");
+  var selectArtist = document.getElementById("filter-select-artist");
 
 	// need to call Pickin.getArtists w/ a callback 
   // because JSON loads asynchronously
@@ -9,7 +9,7 @@
 
   selectArtist.addEventListener("click", function() {
 
-    Pickin.getArtists(Pickin.artistsToDom);
+    Pickin.getArtists(Pickin.artistsToDomFilter);
   });
 
 })();
