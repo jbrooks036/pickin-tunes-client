@@ -5,7 +5,7 @@
 
 	// need to call Pickin.getArtists w/ a callback 
   // because JSON loads asynchronously
-  Pickin.getArtists(Pickin.artistsToDom);
+  Pickin.getArtists(Pickin.artistsToDomFilter);
 
   selectArtist.addEventListener("click", function() {
 
