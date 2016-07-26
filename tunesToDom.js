@@ -8,8 +8,8 @@ var Pickin = (function (pickin) {
 
     var tunesTable = document.getElementById("tunes-table");
     var numTunes = tunes.length;
-    // var cumTable = "<thead><tr><th>Id</th><th>Artist</th><th>Title</th><th>Album</th></tr></thead>";
-    var cumTable = "<thead><tr><th>Id</th><th>Title</th></tr></thead>";
+    var cumTable = "<thead><tr><th>Id</th><th>Artist</th><th>Title</th><th>Album</th></tr></thead>";
+    //var cumTable = "<thead><tr><th>Id</th><th>Title</th></tr></thead>";
 
     // populate table
     for (var i = 0; i < numTunes; i++)
@@ -17,8 +17,8 @@ var Pickin = (function (pickin) {
       var tuneId = tunes[i].TuneId;
       var str = "id=" + tuneId;
       var tableRow = "<tr><td>" + tuneId
-        // + "</td><td>"
-        // + tunes[i].artist
+        + "</td><td>"
+        + tunes[i].Artist.ArtistName
         + "</td><td>"
         + tunes[i].TuneTitle
         + "</td><td>"

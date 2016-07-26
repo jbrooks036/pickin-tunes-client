@@ -9,7 +9,7 @@
 
   selectArtist.addEventListener("click", function() {
 
-    Pickin.getArtists(Pickin.artistsToDomFilter);
+    Pickin.getArtists(Pickin.artistsToDom);
   });
 
 })();

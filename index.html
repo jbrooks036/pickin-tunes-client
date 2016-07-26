@@ -21,18 +21,18 @@
   </div>
 
   <div id="display-body" class="container">
-    <section id="choose-panel" class="col-md-4">
-      <h2> Choose Panel </h2>
-      <div id="choose-artist">
+    <section id="filter-panel" class="col-md-4">
+      <h2> Filter </h2>
+      <div id="filter-artist">
         <label for="filter-select-artist">Select Artist</label>
         <select id="filter-select-artist">
-           <option value="earl-scruggs">Earl Scruggs</option>
+          <option value="earl-scruggs">Earl Scruggs</option>
           <option value="lester-flatt">Lester Flatt</option>
         </select>
       </div>
       <br>
-      <label for="select-tune">Select Tune</label>
-      <div id="select-tune">
+      <label for="filter-tune">Select Tune</label>
+      <div id="filter-tune">
         <select>
           <option value="little-maggie">Little Maggie</option>
           <option value="old-joe-clark">Old Joe Clark</option>
@@ -49,10 +49,19 @@
     </section>
 
     <section id="add-tune-view" class="hidden  col-md-8"> 
-      <h2> Add a Tune</h2>
- 
-        Artist:<br>
-        <input type="text" name="artist-name" placeholder="add artist name here" id="artist-name">
+      <h2> Add Tune</h2>
+
+        <div id="choose-artist"> 
+<!--          Artist:<br>
+           <input type="text" name="artist-name" placeholder="add artist name here" id="artist-name">
+ -->
+          <label for="add-tune-select-artist">Select Artist</label>
+          <select id="add-tune-select-artist">
+             <option value="earl-scruggs">Earl Scruggs</option>
+             <option value="lester-flatt">Lester Flatt</option>
+          </select>
+        </div>
+
         <br><br>
         Tune Title:<br>
         <input type="text" name="tune-title" value="add tune title here" id="tune-title">
@@ -60,7 +69,7 @@
         <input type="button" value="Add" id="add-tune-button">
 <!--         Album:<br>
         <input type="text" name="album-title" value="add album title here" id="album-title">
- -->    <br><br>
+        <br><br>
 
         <form action="http://localhost:5000/api/tune">
           Artist:<br>
@@ -71,6 +80,7 @@
           <br><br>
           <input type="submit" value="Add">          
         </form>
+-->
     </section>
 
     <section id="add-artist-view" class="hidden  col-md-8"> 
@@ -82,13 +92,13 @@
         <input type="button" value="Add" id="add-artist-button">
         <br><br>
  
-        <form action="http://localhost:5000/api/artist">
+<!--         <form action="http://localhost:5000/api/artist">
           Artist:<br>
           <input type="text" name="artist-name" placeholder="add artist name here" id="artist-name">
           <br><br>
           <input type="submit" value="Add">          
         </form>
-
+ -->
     </section>
   </div>  
 
@@ -104,7 +114,7 @@
   <script src="tunesToDom.js" type="text/javascript" charset="utf-8"></script>
   <script src="tunes.js" type="text/javascript" charset="utf-8"></script>  
   <script src="artistLoader.js" type="text/javascript" charset="utf-8"></script>
-  <script src="artistsToDomFilter.js" type="text/javascript" charset="utf-8"></script>
+  <script src="artistsToDom.js" type="text/javascript" charset="utf-8"></script>
   <script src="filter.js" type="text/javascript" charset="utf-8"></script>  
   <script src="addTune.js" type="text/javascript" charset="utf-8"></script> 
   <script src="addArtist.js" type="text/javascript" charset="utf-8"></script>  
