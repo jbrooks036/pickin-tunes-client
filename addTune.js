@@ -8,7 +8,6 @@
   var listView = document.getElementById("list-tunes-view");
   var artistInputValue = document.getElementById("add-tune-select-artist");
   var titleInputValue = document.getElementById("tune-title");
-  var albumInputValue = document.getElementById("album-title");
 
   // SPA navigation - manage panes
   addTuneLink.addEventListener("click", function() {
