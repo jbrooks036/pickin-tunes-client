@@ -1,13 +1,13 @@
 (function () {
   'use strict';
   
-  var selectArtist = document.getElementById("filter-select-artist");
+  var filterSelectArtist = document.getElementById("filter-select-artist");
 
 	// need to call Pickin.getArtists w/ a callback 
   // because JSON loads asynchronously
   Pickin.getArtists(Pickin.artistsToDom);
 
-  selectArtist.addEventListener("click", function() {
+  filterSelectArtist.addEventListener("click", function() {
 
     Pickin.getArtists(Pickin.artistsToDom);
   });

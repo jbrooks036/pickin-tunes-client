@@ -8,8 +8,8 @@
   var listView = document.getElementById("list-tunes-view");
   var artistInputValue = document.getElementById("add-tune-select-artist");
   var titleInputValue = document.getElementById("tune-title");
-  var albumInputValue = document.getElementById("album-title");
 
+  // SPA navigation - manage panes
   addTuneLink.addEventListener("click", function() {
 
     listView.classList.add("hidden");
@@ -20,22 +20,16 @@
 
   });
 
+  // event listener for Add Tune button
   var addButton = document.getElementById("add-tune-button");
   addButton.addEventListener("click", function() {
-    // console.log("add button clicked, artist = ", artistInputValue.value);
-    // console.log("add button clicked, title = ", titleInputValue.value);
-    // console.log("add button clicked, album = ", albumInputValue.value);
 
-
+    // set up XHR
     var xhr = new XMLHttpRequest();
     xhr.open('POST', 'http://localhost:5000/api/tune');
     xhr.setRequestHeader('Content-Type', 'application/json');
-    xhr.onload = function() {
-                          Pickin.getTunes(Pickin.tunesToDom);
-                          addTuneView.classList.add("hidden");
-                          listView.classList.add("visible");
-                          listView.classList.remove("hidden");
-                  };
+
+    // create Tune object and send it server-side               
     var newTuneObject = {
       TuneTitle: titleInputValue.value,
       ArtistId: artistInputValue.value
@@ -45,6 +39,14 @@
       TuneTitle: titleInputValue.value,
       ArtistId: artistInputValue.value
     }));
+
+    // after adding tune, switch SPA pane to list tunes
+    xhr.onload = function() {
+                          Pickin.getTunes(Pickin.tunesToDom);
+                          addTuneView.classList.add("hidden");
+                          listView.classList.add("visible");
+                          listView.classList.remove("hidden");
+                  };
 
   })
 
