@@ -9,7 +9,7 @@ var Pickin = (function (xhr) {
   // the "{ ... }" because otherwise 
   // e.g. the "cb(tuneArray)" call would get executed
   // before the JSON fetch happened. 
-  xhr.getTunes = function (cb) {
+  xhr.getAllTunes = function (cb) {
 
     // an array to hold tunes 
     var tuneArray = [];
@@ -18,7 +18,7 @@ var Pickin = (function (xhr) {
     var loader = new XMLHttpRequest();
 
     // set up loader with callback function
-    loader.addEventListener("load", fetchTunes);
+    loader.addEventListener("load", fetchAllTunes);
 
     // now do the actual load from JSON file
     loader.open("GET", "http://localhost:5000/api/tune");
@@ -26,7 +26,7 @@ var Pickin = (function (xhr) {
 
     // function to extract tunes from JSON object 
     // and put it into a local (private) array for the callback
-    function fetchTunes() {
+    function fetchAllTunes() {
 
       var jsonObj = JSON.parse(this.responseText);
 
