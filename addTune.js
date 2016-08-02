@@ -42,7 +42,7 @@
 
     // after adding tune, switch SPA pane to list tunes
     xhr.onload = function() {
-                          Pickin.getTunes(Pickin.tunesToDom);
+                          Pickin.getAllTunes(Pickin.tunesToDom);
                           addTuneView.classList.add("hidden");
                           listView.classList.add("visible");
                           listView.classList.remove("hidden");

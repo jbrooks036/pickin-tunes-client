@@ -11,7 +11,7 @@
 
 	// need to call Pickin.getTunes() w/ a callback 
   // because JSON loads asynchronously
-  Pickin.getTunes(Pickin.tunesToDom);
+  Pickin.getAllTunes(Pickin.tunesToDom);
 
   // event listener for navigating to "View Tunes"
   listLink.addEventListener("click", function() {
@@ -21,7 +21,7 @@
     listView.classList.add("visible");
     listView.classList.remove("hidden");
 
-    Pickin.getTunes(Pickin.tunesToDom);
+    Pickin.getAllTunes(Pickin.tunesToDom);
   });
 
 })();
