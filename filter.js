@@ -9,7 +9,9 @@
 
   filterSelectArtist.addEventListener("click", function() {
 
-    Pickin.getArtists(Pickin.artistsToDom);
+    console.log("filterSelectArtist.value = ", filterSelectArtist.value);
+
+    Pickin.getTunesByArtist(Pickin.tunesToDom, filterSelectArtist.value);
   });
 
 })();
