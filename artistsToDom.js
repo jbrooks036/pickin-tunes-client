@@ -6,7 +6,9 @@ var Pickin = (function (pickin) {
 
   // populate both ArtistSelect pulldown menus at once 
   pickin.artistsToDom = function (artists) {
-    console.log("artists = ", artists);
+
+    console.log("artistsToDom.js:10 / artists = ", artists);
+
     var numArtists = artists.length;
 
     // get the SelectArtist elements

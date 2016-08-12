@@ -11,6 +11,7 @@
 
 	// need to call Pickin.getTunes() w/ a callback 
   // because JSON loads asynchronously
+  console.log("tunes.js:14/ calling Pickin.getAllTunes(Pickin.tunesToDom)");
   Pickin.getAllTunes(Pickin.tunesToDom);
 
   // event listener for navigating to "View Tunes"

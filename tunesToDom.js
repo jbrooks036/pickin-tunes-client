@@ -6,6 +6,8 @@ var Pickin = (function (pickin) {
 
   pickin.tunesToDom = function (tunes) {
 
+    console.log("pickin.tunesToDom:9; tunes = ", tunes);
+
     var tunesTable = document.getElementById("tunes-table");
     var numTunes = tunes.length;
     var cumTable = "<thead><tr><th>Id</th><th>Artist</th><th>Title</th><th>Album</th></tr></thead>";
