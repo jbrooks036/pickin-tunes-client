@@ -31,7 +31,7 @@
     xhr.open('POST', 'http://localhost:5000/api/artist');
     xhr.setRequestHeader('Content-Type', 'application/json');
     xhr.onload = function() {
-                          Pickin.getTunes(Pickin.tunesToDom);
+                          Pickin.getAllTunes(Pickin.tunesToDom);
                           addArtistView.classList.add("hidden");
                           listView.classList.add("visible");
                           listView.classList.remove("hidden");
