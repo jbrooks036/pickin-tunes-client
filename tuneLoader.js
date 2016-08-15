@@ -48,6 +48,7 @@ var Pickin = (function (xhr) {
   xhr.getTunesByArtist = function (cb, artistId) {
 
     console.log("tuneLoader.js:50; xhr.getTunesByArtist = function(cb, artistId).  cb = ", cb);
+    console.log("tuneLoader.js:51; this = ", this);
 
     // an array to hold tunes 
     var tuneArray = [];
@@ -60,6 +61,7 @@ var Pickin = (function (xhr) {
 
     // now set the path and do the actual load from JSON file
     var path = "http://localhost:5000/api/artist/" + artistId + "/tunes";
+    console.log("tuneLoader.js:64 / path = ", path);
     loader.open("GET", path);
     loader.send();
 
@@ -67,7 +69,7 @@ var Pickin = (function (xhr) {
     // and put it into a local (private) array for the callback
     function fetchTunesByArtist() {
 
-      console.log("tuneLoader.js:70; xhr.fetchTunesByArtist = function()");
+      console.log("tuneLoader.js:72; fetchTunesByArtist; this = ", this);
 
       var jsonObj = JSON.parse(this.responseText);
 
