@@ -17,8 +17,8 @@ var Pickin = (function (pickin) {
 
     // gen up options and artist index
     // html requires two separate options for two selects :-(
-    var option1 = null;
-    var option2 = null;
+    var filterOption = null;
+    var addTuneOption = null;
     var nextArtist = null;
 
     // loop through the array of artists and 
@@ -28,15 +28,15 @@ var Pickin = (function (pickin) {
       var nextArtistName = artists[i].ArtistName;
       var nextArtistValue = artists[i].ArtistId;
 
-      option1 = document.createElement("option");
-      option1.value = nextArtistValue;
-      option1.innerHTML = nextArtistName;
-      filterArtistSelect.appendChild(option1);
+      filterOption = document.createElement("option");
+      filterOption.value = nextArtistValue;
+      filterOption.innerHTML = nextArtistName;
+      filterArtistSelect.appendChild(filterOption);
 
-      option2 = document.createElement("option");
-      option2.value = nextArtistValue;
-      option2.innerHTML = nextArtistName;
-      addTuneArtistSelect.appendChild(option2);
+      addTuneOption = document.createElement("option");
+      addTuneOption.value = nextArtistValue;
+      addTuneOption.innerHTML = nextArtistName;
+      addTuneArtistSelect.appendChild(addTuneOption);
     }
   }
 
