@@ -7,7 +7,7 @@
   // because JSON loads asynchronously
   Pickin.getArtists(Pickin.artistsToDom);
 
-  filterSelectArtist.addEventListener("click", function() {
+  filterSelectArtist.addEventListener("change", function() {
 
     console.log("filterSelectArtist.value = ", filterSelectArtist.value);
 
