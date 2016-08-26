@@ -57,7 +57,7 @@ var Pickin = (function (xhr) {
     var loader = new XMLHttpRequest();
 
     // set up loader with callback function
-    loader.addEventListener("load", fetchTunesByArtist());
+    loader.addEventListener("load", fetchTunesByArtist;
 
     // now set the path and do the actual load from JSON file
     var path = "http://localhost:5000/api/artist/" + artistId + "/tunes";
