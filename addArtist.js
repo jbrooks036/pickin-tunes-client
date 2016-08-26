@@ -22,21 +22,16 @@
 
   var addButton = document.getElementById("add-artist-button");
   addButton.addEventListener("click", function() {
-    // console.log("add button clicked, artist = ", artistInputValue.value);
-    // console.log("add button clicked, title = ", titleInputValue.value);
-    // console.log("add button clicked, album = ", albumInputValue.value);
-
 
     var xhr = new XMLHttpRequest();
     xhr.open('POST', 'http://localhost:5000/api/artist');
     xhr.setRequestHeader('Content-Type', 'application/json');
     xhr.onload = function() {
-                          Pickin.getTunes(Pickin.tunesToDom);
+                          Pickin.getAllTunes(Pickin.tunesToDom);
                           addArtistView.classList.add("hidden");
                           listView.classList.add("visible");
                           listView.classList.remove("hidden");
                   };
-    console.log("ArtistName: ", artistInputValue.value);
     xhr.send(JSON.stringify({
       ArtistName: artistInputValue.value
     }));

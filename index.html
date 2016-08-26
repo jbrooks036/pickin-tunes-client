@@ -26,20 +26,9 @@
       <div id="filter-artist">
         <label for="filter-select-artist">Select Artist</label>
         <select id="filter-select-artist">
-          <option value="earl-scruggs">Earl Scruggs</option>
-          <option value="lester-flatt">Lester Flatt</option>
         </select>
       </div>
       <br>
-      <label for="filter-tune">Select Tune</label>
-      <div id="filter-tune">
-        <select>
-          <option value="little-maggie">Little Maggie</option>
-          <option value="old-joe-clark">Old Joe Clark</option>
-        </select>
-      </div>
-      <br>
-      <button type="button">Filter</button>
     </section>
 
     <section id="list-tunes-view" class="visible col-md-8">
@@ -52,9 +41,6 @@
       <h2> Add Tune</h2>
 
         <div id="choose-artist"> 
-<!--          Artist:<br>
-           <input type="text" name="artist-name" placeholder="add artist name here" id="artist-name">
- -->
           <label for="add-tune-select-artist">Select Artist</label>
           <select id="add-tune-select-artist">
              <option value="earl-scruggs">Earl Scruggs</option>
@@ -67,20 +53,6 @@
         <input type="text" name="tune-title" value="add tune title here" id="tune-title">
         <br><br>
         <input type="button" value="Add" id="add-tune-button">
-<!--         Album:<br>
-        <input type="text" name="album-title" value="add album title here" id="album-title">
-        <br><br>
-
-        <form action="http://localhost:5000/api/tune">
-          Artist:<br>
-          <input type="text" name="tune-artist-name" placeholder="add artist name here" id="tune-artist-name">
-          <br><br>
-          Tune Title:<br>
-          <input type="text" name="tune-title" value="add tune title here" id="tune-title">
-          <br><br>
-          <input type="submit" value="Add">          
-        </form>
--->
     </section>
 
     <section id="add-artist-view" class="hidden  col-md-8"> 
@@ -90,15 +62,7 @@
         <input type="text" name="add-artist-name" placeholder="add artist name here" id="add-artist-name">
         <br><br>
         <input type="button" value="Add" id="add-artist-button">
-        <br><br>
- 
-<!--         <form action="http://localhost:5000/api/artist">
-          Artist:<br>
-          <input type="text" name="artist-name" placeholder="add artist name here" id="artist-name">
-          <br><br>
-          <input type="submit" value="Add">          
-        </form>
- -->
+        <br><br> 
     </section>
   </div>  
 

@@ -6,7 +6,6 @@ var Pickin = (function (pickin) {
 
   // populate both ArtistSelect pulldown menus at once 
   pickin.artistsToDom = function (artists) {
-    console.log("artists = ", artists);
     var numArtists = artists.length;
 
     // get the SelectArtist elements
@@ -39,9 +38,6 @@ var Pickin = (function (pickin) {
       addTuneArtistSelect.appendChild(addTuneOption);
     }
   }
-
-  // artistSelect.selectedIndex
-  // artistSelect.value
 
   // all done
   return pickin;
