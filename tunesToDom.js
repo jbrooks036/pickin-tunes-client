@@ -9,7 +9,6 @@ var Pickin = (function (pickin) {
     var tunesTable = document.getElementById("tunes-table");
     var numTunes = tunes.length;
     var cumTable = "<thead><tr><th>Id</th><th>Artist</th><th>Title</th><th>Album</th></tr></thead>";
-    //var cumTable = "<thead><tr><th>Id</th><th>Title</th></tr></thead>";
 
     // populate table
     for (var i = 0; i < numTunes; i++)
@@ -22,11 +21,9 @@ var Pickin = (function (pickin) {
         + "</td><td>"
         + tunes[i].TuneTitle
         + "</td><td>"
-//        + "<button type=&quot;button&quot; class=&quot;btn btn-default btn-xs&quot; id=tuneId;>Delete</button>" 
         + "<button type=button class='btn btn-default btn-xs' "
         + str 
         + ">Delete</button>" 
-          // + tunes[i].album
         + "</td></tr>";
       cumTable += tableRow;
     }
@@ -40,7 +37,6 @@ var Pickin = (function (pickin) {
       var currentRow = tunesTable.rows[i];
       var createRowClickHandler = 
         function(row) {
-          // console.log("inside createClickHandler");
           return function() { 
             var cell = row.getElementsByTagName("td")[0];
             var id = cell.innerHTML;
@@ -71,7 +67,7 @@ var Pickin = (function (pickin) {
             // and refresh the list in the DOM when completed
             xhr.onload = function() {
               if (xhr.status === 200) {
-                Pickin.getTunes(Pickin.tunesToDom);
+                Pickin.getAllTunes(Pickin.tunesToDom);
               }
             };
             xhr.send();

@@ -9,8 +9,6 @@
 
   filterSelectArtist.addEventListener("change", function() {
 
-    console.log("filterSelectArtist.value = ", filterSelectArtist.value);
-
     Pickin.getTunesByArtist(Pickin.tunesToDom, filterSelectArtist.value);
   });
 

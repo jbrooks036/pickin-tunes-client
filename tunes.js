@@ -9,7 +9,7 @@
   var addArtistLink = document.getElementById("link-add-artist");
   var addArtistView = document.getElementById("add-artist-view");
 
-	// need to call Pickin.getTunes() w/ a callback 
+	// need to call Pickin.getAllTunes() w/ a callback 
   // because JSON loads asynchronously
   Pickin.getAllTunes(Pickin.tunesToDom);
 

@@ -34,7 +34,7 @@
       TuneTitle: titleInputValue.value,
       ArtistId: artistInputValue.value
     };
-    console.log("newTuneObject = ", newTuneObject);
+
     xhr.send(JSON.stringify({
       TuneTitle: titleInputValue.value,
       ArtistId: artistInputValue.value
