@@ -1,5 +1,5 @@
 #navbar {
-	background: #FFB4B0;
+	background: #5bc0de;
 	font-size: 100%;
 	color: blue;
   width: 530px;
@@ -13,8 +13,7 @@
 	font-size: 100%;
 	padding: 20px;
   background-color:#4DD7FA;
-  height:400px;
-  /*width:175px;*/
+  height:100px;
   float:left;
   padding:10px; 
   margin:10px;
@@ -22,7 +21,7 @@
 }
 
 #list-tunes-view {
-	background: #FEFAC0;
+	background: #4DD7FA;
 	color: #785616;
 	font-size: 100%;
   height:400px;
