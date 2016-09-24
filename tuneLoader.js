@@ -22,6 +22,8 @@ var Pickin = (function (xhr) {
     loader.addEventListener("load", fetchAllTunes);
 
     // now do the actual load from JSON file
+    // baseUrl = "http://localhost:5000/";
+    // currentPath = "api/tune";
     loader.open("GET", "http://localhost:5000/api/tune");
     loader.send();
 

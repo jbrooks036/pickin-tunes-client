@@ -61,6 +61,7 @@ var Pickin = (function (pickin) {
 
             // then send the xhr request for deleting that tune to backend
             var xhr = new XMLHttpRequest();
+            // add base url stuff here
             var urlAddr = 'http://localhost:5000/api/tune/' + tuneId;
             xhr.open('DELETE', urlAddr);
             xhr.setRequestHeader('Content-Type', 'application/json');
