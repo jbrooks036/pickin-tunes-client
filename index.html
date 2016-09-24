@@ -7,6 +7,7 @@
   <title class="page-title">PickinTunes</title>
 <!--   <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
  -->
+
   <link rel="stylesheet" href="http://bootswatch.com/yeti/bootstrap.min.css">
 
   <!-- <link rel="stylesheet" link="./lib/bootstrap-3.3.7-dist/bootstrap-3.3.7-dist/css/bootstrap.min.css"> -->
@@ -21,24 +22,31 @@
     <a href="#" id="link-add-tune">Add Tune</a> 
     <a href="#" id="link-add-artist">Add Artist</a> 
   </nav>
-  <div>
-    <h1>Pickin' Tunes </h1>  
+  <div  class="col-md-12">
+    <div class="row">
+        <div class="col-sm-9">
+          <h1 id="page-title"> Pickin' Tunes </h1> 
+        </div>    
+        <div class="col-sm-3">
+          <img id = "bill-monroe-boys-img" class= "image-responsive col-md-3" src="bluegrassboys_1968.jpg" alt="boys">        
+        </div>
+    </div>
   </div>
 
-    <div id="filter-artist" class="container-fluid">
-      <section id="filter-panel" class="container-fluid">
-        <h4> Filter </h4>
-        <label for="filter-select-artist">Select Artist</label>
-        <select id="filter-select-artist">
-        </select>
-        <br>
-      </section>
-    </div>
+  <div id="filter-artist" class="container-fluid">
+    <section id="filter-panel" class="container-fluid">
+      <h4> Filter </h4>
+      <label for="filter-select-artist">Select Artist</label>
+      <select id="filter-select-artist">
+      </select>
+      <br>
+    </section>
+  </div>
 
   <div id="display-body" class="container">
-    <section id="list-tunes-view" class="visible col-md-8">
+    <section id="list-tunes-view" class="visible col-md-12">
       <h2> Tunes </h2>
-      <table id="tunes-table" class="table-striped">
+      <table id="tunes-table" class="table-striped table-hover table-responsive col-md-12">
       </table>
     </section>
 
