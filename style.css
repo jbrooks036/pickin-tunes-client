@@ -71,6 +71,7 @@ body {
 #bill-monroe-boys-img {
   border-radius: 25px; 
   float: right; 
+  margin-top: -60px;
 }
 
 .visible {
